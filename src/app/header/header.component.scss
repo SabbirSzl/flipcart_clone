@@ -1,0 +1,76 @@
+.container-fluid{
+    text-align: center;
+    align-self: center;
+}
+a.nav-link{
+    font-weight: bolder;
+}
+.loginbutton {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(33, 45, 218);
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  form.example input[type=text] {
+    padding: 3px;
+    font-size: 17px;
+    float: left;
+    width: 500px;
+    background: #ffffff;
+    margin:auto;
+    max-width:700px
+  }
+  
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 5px;
+    background: #e7e9eb;
+    color: rgb(15, 54, 230);
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  //login Modal Design
+  .col-md-5{
+    background-color: rgb(60, 104, 248); 
+    padding: 25px;
+    text-align: left;
+  }
+
+  .col-md-7{
+    background-color: rgb(240, 240, 240); 
+  }
+  .otpbutton{
+    background-color: #b87e14; /* Green */
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100%;
+  }

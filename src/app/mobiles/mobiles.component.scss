@@ -1,0 +1,36 @@
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: separate;
+    width: 40%;
+    border: 2px solid #000000;
+  }
+  
+  td, th {
+    border: 2px solid #000000;
+    text-align: center;
+    padding: 8px;
+  }
+.hideDetailsButton, .showDetailsButton{
+    float: left;
+    width: auto;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(216, 205, 181);
+    font-weight: bold;
+  }
+.hideButton{
+  display: none;
+}
+
+  .boldClass {
+font-weight: bold;
+  }
+.italicClass {
+    font-style: italic;
+}
+.colorClass {
+    color: aqua;
+}
+.hiddenClass{
+  display: none;
+}

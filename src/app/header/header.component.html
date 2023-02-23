@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <h6 class="navbar-brand">FlipCart</h6>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="example" action="">
+        <input type="text" placeholder="Search for products, brands and more" name="search">
+        <button type="submit"><i class="fa fa-search" style="font-size:48px;color:rgb(29, 13, 177)"></i></button>
+      </form>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <!-- Button trigger modal -->
+<button id="loginbutton" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" (mouseover)="userDetailsOnHover()">
+  Login
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="">
+          <div class="row">
+            <div class="col-md-5">
+              <h4>Login</h4>
+              <p>Get access to your Orders, Wishlist and Recommendations</p> 
+            </div>
+            <div class="col-md-7">
+                <input class="form-control" id="credential" type="text" placeholder="Enter Email/Phone Number" [(ngModel)]="credential">
+                <br>
+                <br>
+                <p>By continuing, you agree to flipcarts terms of use and privacy policy.</p>
+                <button class="button otpbutton" type="button" (click)="getUserEmail()" routerLink="dashboard">Request OTP</button>
+                <br><br>
+                <a data-bs-target="#newaccount" data-bs-toggle="modal" role="button">New to Flipcart? Create an Account </a>
+                <div class="modal fade" id="newaccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <div class="">
+                          <div class="row">
+                            <div class="col-md-5">
+                              <h4>Looks Like you are new here!</h4>
+                              <p>Sign Up with your mobile number to get started</p> 
+                            </div>
+                            <div class="col-md-7">
+                                Name: <input type="text" name="" id="" (input)="nameChange($event)">
+                                Address: <textarea name="" id="" cols="30" rows="2" onchange="addressChange($event)"></textarea>
+                                Email: <input type="text" name="" id="">
+                                Mobile No: <input type="number" name="" id="">
+                                Male: <input type="checkbox" name="" id="" (change)="genderDefine($event)"> Female: <input type="checkbox" name="" id="" (change)="genderDefine($event)">
+
+                                <br>
+                                <br>
+                                <p>By continuing, you agree to flipcarts terms of use and privacy policy.</p>
+                                <input type="button" value="Register" (click)="registerUser()">
+                                <br>
+                                <button class="button otpbutton" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Existing User? Log In</button><br>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Become A Seller</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cart</a>
+          </li>
+          <li class="nav-item" *ngIf="fetchedData.length > 0">
+            <a class="nav-link" href="#">{{fetchedData[0].name | uppercase}}</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>

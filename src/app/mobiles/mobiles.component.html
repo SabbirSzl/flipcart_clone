@@ -1,0 +1,39 @@
+<button type="submit" (mouseover)="userDetailsOnHover()">See List</button>
+
+<br><br>
+<div class="container">
+    <div class="row">
+        <table>
+            <thead>
+                <tr >
+                    <th colspan="2">Employee Details</th>
+                </tr>
+            </thead>
+            <tbody [class.boldClass]="applyBoldClass" [class.colorClass]="applyColorClass" [class.italicClass]="applyItalicClass" >
+                <tr>
+                    <td>First Name</td>
+                    <td>{{data[0].FirstName}}</td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>{{data[0].LastName}}</td>
+                </tr>
+                <tr [class.hiddenClass]="applyHiddenClass">
+                    <td>Gender</td>
+                    <td>{{data[0].Gender}}</td>
+                </tr>
+                <tr [class.hiddenClass]="applyHiddenClass">
+                    <td>Blood</td>
+                    <td>{{data[0].Blood}}</td>
+                </tr><br>
+                <tr>
+                    <button class="hideDetailsButton" [class.hideButton]="hideDetailsButton" (click)="hideDetails()">Hide Details</button>
+                    <button class="showDetailsButton" [class.hideButton]="showDetailsButton" (click)="showDetails()">Show Details</button>
+                </tr>
+            </tbody>
+            
+            
+        </table>
+        
+    </div>
+</div>

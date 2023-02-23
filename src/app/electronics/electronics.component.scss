@@ -1,0 +1,21 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: separate;
+    width: 60%;
+    border: 2px solid #000000;
+  }
+  
+  td, th {
+    border: 2px solid #000000;
+    text-align: center;
+    padding: 8px;
+  }
+.col-2, .col-10
+{
+  background-color: rgb(241, 241, 241);
+  
+}
+.disabled{
+  opacity: 0.5;
+  pointer-events: none;
+}
